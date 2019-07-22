@@ -28,21 +28,24 @@
 #define PIN_VOUT2     14
 #define PIN_VTH       15
 
-static int counts_idx_vout1 = 0;
-static int counts_idx_vout2 = 0;
 static int counts_idx = 0;
 static int counts20sec_vout1 = 0;
 static int counts20sec_vout2 = 0;
-static int counts20sec = 0;
 
+
+/** <!-- setup {{{1 -->
+ * 1. initialize a Serial port for output.
+ * 2. initialize GPIO pins.
+ */
 void setup() {
     Serial.begin(115200);  // Serial baudrate = 115200bps
     pinMode(PIN_VOUT1, INPUT);
     pinMode(PIN_VOUT2, INPUT);
 
+    // setup B5W Threshould Voltage to 0.5[V]
     pinMode(PIN_VTH, OUTPUT);
     analogWriteResolution(10);
-    analogWrite(PIN_VTH, 0.5 / (3.3 / 1024));  // Threshold Voltage = 0.5 [V]
+    analogWrite(PIN_VTH, 0.5 / (3.3 / 1024));
 }
 
 
@@ -51,6 +54,7 @@ void setup() {
  * 2. output results, format is: [count]
  */
 void loop() {
+    // VOUT1/2 sampling in 2sec.
     uint8_t prv_gpio1 = LOW;
     uint8_t prv_gpio2 = LOW;
     int now = millis(), prev = now;
@@ -71,44 +75,31 @@ void loop() {
         now = millis();
     }
 
+    // output 2sec counts, just for debug.
     Serial.print("VOUT1 :");
     Serial.print(counts_vout1);
-    Serial.print("[count], ");
-    Serial.print("COUNTS20sec_VOUT1 :");
-    if (counts_idx_vout1 < 10) {
-        Serial.print("-----");
-        counts20sec_vout1 += counts_vout1;
-        counts_idx_vout1++;
-    } else {
-        Serial.print(counts20sec_vout1);
-        counts_idx_vout1 = counts20sec_vout1 = 0;
-    }
-    Serial.print("[count],     ");
-    Serial.print("VOUT2 :");
+    Serial.print("[count], VOUT2 :");
     Serial.print(counts_vout2);
-    Serial.print("[count], ");
-    Serial.print("COUNTS20sec_VOUT2 :");
-    if (counts_idx_vout2 < 10) {
-        Serial.print("-----");
-        counts20sec_vout2 += counts_vout2;
-        counts_idx_vout2++;
-    } else {
-        Serial.print(counts20sec_vout2);
-        counts_idx_vout2 = counts20sec_vout2 = 0;
-    }
-    Serial.print("[count],     ");
-    Serial.print("VOUT1-VOUT2 :");
+    Serial.print("[count], VOUT1-VOUT2 :");
     Serial.print(counts_vout1 - counts_vout2);
-    Serial.print("[count], ");
-    Serial.print("COUNTS20sec :");
-    if (counts_idx < 9) {
-        Serial.print("-----");
-        counts20sec += counts_vout1 - counts_vout2;
+
+    // summarize and output 20sec counts
+    Serial.print("COUNTS20sec_VOUT1 :");
+    if (counts_idx < 10) {   // summarize, output empty data.
+        Serial.println("-----[count],"
+                       "COUNTS20sec_VOUT2 :-----[count],"
+                       "COUNTS20sec :-----");
+        counts20sec_vout1 += counts_vout1;
+        counts20sec_vout2 += counts_vout2;
         counts_idx++;
-    } else {
-        Serial.print(counts20sec);
-        counts_idx = counts20sec = 0;
+    } else {                 // output 20sec counts.
+        Serial.print(counts20sec_vout1);
+        Serial.print("[count], COUNTS20sec_VOUT2: ");
+        Serial.print(counts20sec_vout2);
+        Serial.print("[count], COUNTS20sec :");
+        Serial.print(counts20sec_vout1 - counts20sec_vout2);
+        counts_idx = counts20sec_vout1 = counts20sec_vout2 = 0;
     }
-    Serial.println("[count],");
+    Serial.println("[count]");
 }
 // vi: ft=arduino:fdm=marker:et:sw=4:tw=80
