@@ -3,11 +3,13 @@ It is a sample projects for OMRON **B5W** Light Convergent Reflective type
 Sensor with evaluation kit **2JCIE-EV01-AR1**, **2JCIE-EV01-FT1**
 and some Arduino boards.
 
+
 ## B5W-LB: Light Convergent Reflective Sensor
-Light Convergent Reflective Type for Reduced Color and Material
-SusceptibilityReliable Detection of Shiny, Black or Transparent objects
+Reliable Detection of Shiny, Black or Transparent objects.
+
 
 ## B5W-LD: Air Quality Sensor
+Highly Sensitive and Compact Air Quality Sensor.
 
 
 ## Description
