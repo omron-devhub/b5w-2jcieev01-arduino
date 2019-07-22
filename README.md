@@ -1,31 +1,45 @@
-# 2jcieev01-arduino
-It is a sample projects for OMRON sensor evaluation kit **2JCIE-EV01-AR1** and
-**2JCIE-EV01-FT1** with some Arduino boards.
+# b5w-2jcieev01-arduino
+It is a sample projects for OMRON **B5W** Light Convergent Reflective type
+Sensor with evaluation kit **2JCIE-EV01-AR1**, **2JCIE-EV01-FT1**
+and some Arduino boards.
 
-2JCIE-EV01 sensor evaluation boards are Open Platforms by OMRON corporation and
-prototype your ideas with variety environmental information.
+## B5W-LB: Light Convergent Reflective Sensor
+Light Convergent Reflective Type for Reduced Color and Material
+SusceptibilityReliable Detection of Shiny, Black or Transparent objects
+
+## B5W-LD: Air Quality Sensor
+
 
 ## Description
-Arduino sample projects for acquiring data from sensors on 2JCIE-EV01.
-there samples output the sensor data to USB-Serial ports.
+this Arduino sample projects for acquiring data from sensors on 2JCIE-EV01.
+sample projects output the sensor data to USB-Serial ports.
 
-| example | description                     | baord |
-|:-------:|:--------------------------------|:-----------------------|
-| baro-ar | The Barometer sensor sample     | Arduino MKR-WiFi1010   |
-| baro-ft | The Barometer sensor sample     | Adafruit Feather ESP32 |
-| illm-ar | The Illuminance sensor sample   | Arduino MKR-WiFi1010   |
-| illm-ft | The Illuminance sensor sample   | Adafruit Feather ESP32 |
-| humi-ar | The Humidity sensor sample      | Arduino MKR-WiFi1010   |
-| humi-ft | The Humidity sensor sample      | Adafruit Feather ESP32 |
-| accl-ar | The Accelerometer sensor sample | Arduino MKR-WiFi1010   |
-| accl-ft | The Accelerometer sensor sample | Adafruit Feather ESP32 |
-| mmic-ar | The MEMS Microphone document    | Arduino MKR-WiFi1010   |
-| mmic-ft | The MEMS Microphone document    | Adafruit Feather ESP32 |
+| example    | description                     | baord |
+|:----------:|:--------------------------------|:-----------------------|
+| b5w-ld0101 | Air Quality sensor              | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
+| b5w-lb2101 | Light convergent reflective type sensor | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
 
 ## DEMO
-T.B.D (console output)
+sample output for B5W-LD0101
 
-![Console output 2SMPB](console output)
+```
+out1: 111[count], ----[count], out2: 0[count], ----[count]
+out1: 111[count], ----[count], out2: 0[count], ----[count]
+out1: 111[count], ----[count], out2: 0[count], ----[count]
+out1: 111[count], ----[count], out2: 0[count], ----[count]
+out1: 111[count], 1023[count], out2: 0[count], 0[count]
+out1: 111[count], ----[count], out2: 0[count], ----[count]
+out1: 111[count], ----[count], out2: 0[count], ----[count]
+```
+
+sample output for B5W-LB2101
+
+```
+B5W-LB: 0.12[mV]
+B5W-LB: 0.00[mV]
+B5W-LB: 0.00[mV]
+B5W-LB: 3.21[mV]
+```
 
 ## Installation
 see `https://www.arduino.cc/en/guide/libraries`
@@ -49,7 +63,7 @@ see `https://www.arduino.cc/en/guide/libraries`
 1. download this repo
 
     ```shell
-    $ git clone https://github.com/omron-devhub/2jcieev01-arduino
+    $ git clone https://github.com/omron-devhub/b5w-2jcieev01-arduino
     ```
 
 2. launch Arduino-IDE and select our sketch to load.
@@ -57,16 +71,16 @@ see `https://www.arduino.cc/en/guide/libraries`
 
 
 ## Dependencies
-### MEMS Microphone in 2JCIE-EV01-AR1 (base baord Arduino MKR WiFi 1010)
-* please use the example `InputSerialPlotter` from Arduino IDE,
-  `Examples -> Examples for Arduino MKR WiFi 1010 -> I2S -> InputSerialPlotter`
+None
 
-### MEMS Microphone in 2JCIE-EV01-FT1 (base baord Adafruit Feather ESP32)
-* please use the example `InputSerialPlotter` from
-  `https://github.com/maspetsberger/esp32-i2s-mems`
 
 ## Links
+- [Arduino samples for 2JCIE-01-AR1/FT1](https://github.com/omron-devhub/2jcieev01-arduino)
 - [RaspberryPi samples for 2JCIE-01-RP1](https://github.com/omron-devhub/2jcieev01-raspberrypi)
+- [Arduino sample for D6T on 2JCIE-01-AR1/FT1](https://github.com/omron-devhub/d6t-2jcieev01-arduino)
+- [RaspberryPi sample for D6T on 2JCIE-01-RP1](https://github.com/omron-devhub/d6t-2jcieev01-raspberrypi)
+- [Arduino sample for D6F on 2JCIE-01-AR1/FT1](https://github.com/omron-devhub/d6f-2jcieev01-arduino)
+- [RaspberryPi sample for D6F on 2JCIE-01-RP1](https://github.com/omron-devhub/d6f-2jcieev01-raspberrypi)
 
 
 ## Licence
