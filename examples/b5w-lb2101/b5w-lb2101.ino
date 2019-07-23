@@ -26,15 +26,20 @@
 #include <Arduino.h>
 
 /* defines */
+#if defined(ARDUINO_FEATHER_ESP32)
+#define PIN_B5WLB_IN      13
+#define PIN_B5WLB_OUT     33
+#else
 #define PIN_B5WLB_IN      19
 #define PIN_B5WLB_OUT     17
+#endif
 
 /** <!-- setup {{{1 -->
  * 1. initialize a Serial port for output.
  * 2. initialize GPIO pins.
  */
 void setup() {
-    Serial.begin(115200);  // Serial bourd rate = 115200bps
+    Serial.begin(115200);  // Serial baudrate = 115200bps
 
     // turn off LED for safe operation.
     pinMode(PIN_B5WLB_IN, OUTPUT);
@@ -60,7 +65,11 @@ void loop() {
     delayMicroseconds(500);  // 400us as minimum.
 
     int32_t i_high = analogRead(PIN_B5WLB_OUT);
-    float f_high = i_high * 3.3 / 1024.0;
+    #if defined(ARDUINO_FEATHER_ESP32)
+    float f_high = i_high * 3.6 / 4096.0;   // for Feather ESP32
+    #else
+    float f_high = i_high * 3.3 / 1024.0;   // for Arduino MKR
+    #endif
     delayMicroseconds(300);  // should not be exceed 40% ON time of period.
 
     // turn off to next period.

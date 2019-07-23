@@ -24,9 +24,17 @@
 #include <Arduino.h>
 
 /* defines */
+#if defined(ARDUINO_FEATHER_ESP32)
+#define PIN_VOUT1     16
+#define PIN_VOUT2     17
+#define PIN_VTH       26
+#define PIN_EN        21
+#else
 #define PIN_VOUT1     13
 #define PIN_VOUT2     14
 #define PIN_VTH       15
+#define PIN_EN        A3
+#endif
 
 static int counts_idx = 0;
 static int counts20sec_vout1 = 0;
@@ -42,10 +50,18 @@ void setup() {
     pinMode(PIN_VOUT1, INPUT);
     pinMode(PIN_VOUT2, INPUT);
 
+    // enable level-shifters for OUT1/OUT2 on 2JCIE-EV01
+    pinMode(PIN_EN, OUTPUT);
+    digitalWrite(PIN_EN, HIGH);
+
     // setup B5W Threshould Voltage to 0.5[V]
     pinMode(PIN_VTH, OUTPUT);
-    analogWriteResolution(10);
-    analogWrite(PIN_VTH, 0.5 / (3.3 / 1024));
+    #if defined(ARDUINO_FEATHER_ESP32)
+        dacWrite(PIN_VTH, 0.5 / (3.3 / 256));
+    #else
+        analogWriteResolution(10);
+        analogWrite(PIN_VTH, 0.5 / (3.3 / 1024));
+    #endif
 }
 
 
