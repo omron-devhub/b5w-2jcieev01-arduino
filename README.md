@@ -22,25 +22,47 @@ sample projects output the sensor data to USB-Serial ports.
 | b5w-lb2101 | Light convergent reflective type sensor | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
 
 ## DEMO
-sample output for B5W-LD0101
+sample output from B5W-LD0101
 
 ```
-out1: 111[count], ----[count], out2: 0[count], ----[count]
-out1: 111[count], ----[count], out2: 0[count], ----[count]
-out1: 111[count], ----[count], out2: 0[count], ----[count]
-out1: 111[count], ----[count], out2: 0[count], ----[count]
-out1: 111[count], 1023[count], out2: 0[count], 0[count]
-out1: 111[count], ----[count], out2: 0[count], ----[count]
-out1: 111[count], ----[count], out2: 0[count], ----[count]
+VOUT1 :239[count], VOUT2 :0[count], VOUT1-VOUT2 :239COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :240[count], VOUT2 :0[count], VOUT1-VOUT2 :240COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :239[count], VOUT2 :0[count], VOUT1-VOUT2 :239COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :156[count], VOUT2 :0[count], VOUT1-VOUT2 :156COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :76[count], VOUT2 :20[count], VOUT1-VOUT2 :56COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :64[count], VOUT2 :25[count], VOUT1-VOUT2 :39COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :75[count], VOUT2 :46[count], VOUT1-VOUT2 :29COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :68[count], VOUT2 :47[count], VOUT1-VOUT2 :21COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :93[count], VOUT2 :21[count], VOUT1-VOUT2 :72COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :188[count], VOUT2 :2[count], VOUT1-VOUT2 :186COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :232[count], VOUT2 :0[count], VOUT1-VOUT2 :232COUNTS20sec_VOUT1 :1438[count], COUNTS20sec_VOUT2: 161[count], COUNTS20sec :1277[count]
+VOUT1 :241[count], VOUT2 :0[count], VOUT1-VOUT2 :241COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+VOUT1 :241[count], VOUT2 :0[count], VOUT1-VOUT2 :241COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
 ```
 
-sample output for B5W-LB2101
+sample output from B5W-LB2101
 
 ```
-B5W-LB: 0.12[mV]
-B5W-LB: 0.00[mV]
-B5W-LB: 0.00[mV]
-B5W-LB: 3.21[mV]
+B5W-LB:0.01[mV]
+B5W-LB:0.02[mV]
+B5W-LB:0.03[mV]
+B5W-LB:0.01[mV]
+B5W-LB:0.00[mV]
+B5W-LB:0.01[mV]
+B5W-LB:0.00[mV]
+B5W-LB:2.96[mV]
+B5W-LB:2.49[mV]
+B5W-LB:0.09[mV]
+B5W-LB:0.52[mV]
+B5W-LB:2.22[mV]
+B5W-LB:0.08[mV]
+B5W-LB:0.08[mV]
+B5W-LB:0.10[mV]
+B5W-LB:1.40[mV]
+B5W-LB:2.51[mV]
+B5W-LB:2.88[mV]
+B5W-LB:2.94[mV]
+B5W-LB:2.96[mV]
 ```
 
 ## Installation
