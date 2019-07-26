@@ -100,11 +100,11 @@ void loop() {
     Serial.print(counts_vout1 - counts_vout2);
 
     // summarize and output 20sec counts
-    Serial.print("COUNTS20sec_VOUT1 :");
-    if (counts_idx < 10) {   // summarize, output empty data.
-        Serial.println("-----[count],"
-                       "COUNTS20sec_VOUT2 :-----[count],"
-                       "COUNTS20sec :-----");
+    Serial.print(", COUNTS20sec_VOUT1 :");
+    if (counts_idx < 9) {   // summarize, output empty data.
+        Serial.print("-----[count],"
+                     "COUNTS20sec_VOUT2 :-----[count],"
+                     "COUNTS20sec :-----");
         counts20sec_vout1 += counts_vout1;
         counts20sec_vout2 += counts_vout2;
         counts_idx++;

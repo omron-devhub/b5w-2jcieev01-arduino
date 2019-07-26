@@ -82,7 +82,7 @@ void loop() {
     f_diff = f_diff < 0.0 ? 0.0: f_diff;
     Serial.print("B5W-LB:");
     Serial.print(f_diff, 2);
-    Serial.println("[mV]");
+    Serial.println("[V]");
     delay(500);
 }
 // vi: ft=arduino:fdm=marker:et:sw=4:tw=80
