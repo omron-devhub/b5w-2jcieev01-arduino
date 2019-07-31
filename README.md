@@ -16,7 +16,7 @@ Highly Sensitive and Compact Air Quality Sensor.
 this Arduino sample projects for acquiring data from sensors on 2JCIE-EV01.
 sample projects output the sensor data to USB-Serial ports.
 
-| example    | description                     | baord |
+| example    | description                     | board |
 |:----------:|:--------------------------------|:-----------------------|
 | b5w-ld0101 | Air Quality sensor              | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
 | b5w-lb2101 | Light convergent reflective type sensor | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
