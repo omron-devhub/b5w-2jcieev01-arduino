@@ -1,6 +1,5 @@
-# b5w-2jcieev01-arduino
-It is a sample projects for OMRON **B5W** Light Convergent Reflective type
-Sensor with evaluation kit **2JCIE-EV01-AR1**, **2JCIE-EV01-FT1**
+# b5w-d6f-d6t-2jcieev01-arduino
+It is a sample projects for OMRON sensor (Light convergent sensor, air quality sensor, flow sensor, differential pressure sensor, thermal sensor) with evaluation kit **2JCIE-EV01-AR1**, **2JCIE-EV01-FT1**
 and some Arduino boards.
 
 
@@ -11,59 +10,47 @@ Reliable Detection of Shiny, Black or Transparent objects.
 ## B5W-LD: Air Quality Sensor
 Highly Sensitive and Compact Air Quality Sensor.
 
+## D6T: Termal Sensor
+High Sensitivity Enables Detection of Stationary Human Presence.
+
+## D6F: Flow Sensor
+Can Measure Low-flow rate and High Accuracy with Superior Resistance to Environments.
+
+## D6F-PH: Differential Pressure Sensor
+A Compact, High-accuracy Differential Pressure Sensor with Superior Resistance to Environments.
 
 ## Description
 this Arduino sample projects for acquiring data from sensors on 2JCIE-EV01.
 sample projects output the sensor data to USB-Serial ports.
 
-| example    | description                     | board |
+| example / file    | description                     | board |
 |:----------:|:--------------------------------|:-----------------------|
-| b5w-ld0101 | Air Quality sensor              | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
-| b5w-lb2101 | Light convergent reflective type sensor | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
+| b5w-ld0101 / b5w-d6f-d6t | All sensor              | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
+
 
 ## DEMO
-sample output from B5W-LD0101
+sample output from All sensor
 
-```
-VOUT1 :239[count], VOUT2 :0[count], VOUT1-VOUT2 :239COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :240[count], VOUT2 :0[count], VOUT1-VOUT2 :240COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :239[count], VOUT2 :0[count], VOUT1-VOUT2 :239COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :156[count], VOUT2 :0[count], VOUT1-VOUT2 :156COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :76[count], VOUT2 :20[count], VOUT1-VOUT2 :56COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :64[count], VOUT2 :25[count], VOUT1-VOUT2 :39COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :75[count], VOUT2 :46[count], VOUT1-VOUT2 :29COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :68[count], VOUT2 :47[count], VOUT1-VOUT2 :21COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :93[count], VOUT2 :21[count], VOUT1-VOUT2 :72COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :188[count], VOUT2 :2[count], VOUT1-VOUT2 :186COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :232[count], VOUT2 :0[count], VOUT1-VOUT2 :232COUNTS20sec_VOUT1 :1438[count], COUNTS20sec_VOUT2: 161[count], COUNTS20sec :1277[count]
-VOUT1 :241[count], VOUT2 :0[count], VOUT1-VOUT2 :241COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
-VOUT1 :241[count], VOUT2 :0[count], VOUT1-VOUT2 :241COUNTS20sec_VOUT1 :-----[count],COUNTS20sec_VOUT2 :-----[count],COUNTS20sec :-----[count]
+13:42:26.053 -> 0.37  [V]     (B5W-LB)
+13:42:26.053 -> 24.8 [degC]   (D6T-01)
+13:42:26.053 -> -0.01 [Pa]     (D6F-PH)
+13:42:26.053 -> 5.00 [L/min]  (D6F-10)
+13:42:26.053 -> 1[count], ----[20s count]   (B5W-LD)
+13:42:26.053 ->  
+13:42:27.096 -> 1.20  [V]     (B5W-LB)
+13:42:27.096 -> 22.8 [degC]   (D6T-01)
+13:42:27.096 -> -0.01 [Pa]     (D6F-PH)
+13:42:27.096 -> 5.00 [L/min]  (D6F-10)
+13:42:27.096 -> 1[count], ----[20s count]   (B5W-LD)
+13:42:27.096 ->  
+13:42:28.107 -> 2.11  [V]     (B5W-LB)
+13:42:28.107 -> 22.9 [degC]   (D6T-01)
+13:42:28.107 -> -0.01 [Pa]     (D6F-PH)
+13:42:28.107 -> 5.00 [L/min]  (D6F-10)
+13:42:28.142 -> 1[count], 19[20s count]   (B5W-LD)
+13:42:28.142 -> 
 ```
 
-sample output from B5W-LB2101
-
-```
-B5W-LB:0.01[mV]
-B5W-LB:0.02[mV]
-B5W-LB:0.03[mV]
-B5W-LB:0.01[mV]
-B5W-LB:0.00[mV]
-B5W-LB:0.01[mV]
-B5W-LB:0.00[mV]
-B5W-LB:2.96[mV]
-B5W-LB:2.49[mV]
-B5W-LB:0.09[mV]
-B5W-LB:0.52[mV]
-B5W-LB:2.22[mV]
-B5W-LB:0.08[mV]
-B5W-LB:0.08[mV]
-B5W-LB:0.10[mV]
-B5W-LB:1.40[mV]
-B5W-LB:2.51[mV]
-B5W-LB:2.88[mV]
-B5W-LB:2.94[mV]
-B5W-LB:2.96[mV]
-```
 
 ## Installation
 see `https://www.arduino.cc/en/guide/libraries`
@@ -72,22 +59,14 @@ see `https://www.arduino.cc/en/guide/libraries`
 1. download .zip from this repo [releases](releases)
     or [master](archive/master.zip) .
 2. Import the zip from Arduino IDE
-
-    ![install-ide-import-lib](https://user-images.githubusercontent.com/48547675/55043017-9a34e980-5077-11e9-885d-03f9f82e3491.JPG)
-
-    ![install-select-zip](https://user-images.githubusercontent.com/48547675/55043034-a7ea6f00-5077-11e9-99d5-26423fb652b5.JPG)
-
 3. Then, you can see the samples in `File >> Examples` menu.
-
-    ![install-select-examples](https://user-images.githubusercontent.com/48547675/55043028-a28d2480-5077-11e9-8365-6745cda417ff.JPG)
-
 4. Select examples for your favorite sensors, build and program to boards.
 
 ### Manual install
 1. download this repo
 
     ```shell
-    $ git clone https://github.com/omron-devhub/b5w-2jcieev01-arduino
+    $ git clone https://github.com/omron-devhub/b5w-d6f-d6t-2jcieev01-arduino
     ```
 
 2. launch Arduino-IDE and select our sketch to load.
@@ -111,4 +90,3 @@ None
 Copyright (c) OMRON Corporation. All rights reserved.
 
 Licensed under the MIT License.
-
