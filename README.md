@@ -23,9 +23,9 @@ A Compact, High-accuracy Differential Pressure Sensor with Superior Resistance t
 this Arduino sample projects for acquiring data from sensors on 2JCIE-EV01.
 sample projects output the sensor data to USB-Serial ports.
 
-| example / file    | description                     | board |
+| example    | description                     | board |
 |:----------:|:--------------------------------|:-----------------------|
-| b5w-ld0101 / b5w-d6f-d6t | All sensor              | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
+| b5w-ld0101 | All sensor              | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
 
 
 ## DEMO
