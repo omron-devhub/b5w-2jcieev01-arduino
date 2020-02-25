@@ -31,6 +31,7 @@ sample projects output the sensor data to USB-Serial ports.
 ## DEMO
 sample output from All sensor
 
+```
 13:42:26.053 -> 0.37  [V]     (B5W-LB)
 13:42:26.053 -> 24.8 [degC]   (D6T-01)
 13:42:26.053 -> -0.01 [Pa]     (D6F-PH)
@@ -49,6 +50,7 @@ sample output from All sensor
 13:42:28.107 -> 5.00 [L/min]  (D6F-10)
 13:42:28.142 -> 1[count], 19[20s count]   (B5W-LD)
 13:42:28.142 -> 
+
 ```
 
 
