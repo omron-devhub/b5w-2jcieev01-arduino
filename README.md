@@ -25,7 +25,7 @@ sample projects output the sensor data to USB-Serial ports.
 
 | example    | description                     | board |
 |:----------:|:--------------------------------|:-----------------------|
-| b5w-ld0101 | All sensor              | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
+| b5w-lb2101 | All sensor              | Arduino MKR-WiFi1010/ Adafruit Feather ESP32 |
 
 
 ## DEMO
